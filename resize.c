@@ -131,7 +131,7 @@ int main(int argc, char *argv[])
 
         for(int l = 0; l < n; l++)
         {
-            fwrite(lineofpixels, sizeof(RGBTRIPLE), 1, outptr);
+            fwrite(&lineofpixels, sizeof(RGBTRIPLE), 1, outptr);
 
             //add padding to outptr at the end of scanline
             for (int m = 0; m < outfile_padding; m++)
